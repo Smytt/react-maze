@@ -1,0 +1,32 @@
+.cell {
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  border: 2px solid black;
+  margin: -1px;
+}
+
+.filler {
+  background-color: rgb(224, 224, 224);
+  border-color: white;
+}
+
+.corner {
+  border-color: white;
+}
+
+.opening {
+  background-color: teal;
+  border-color: white;
+  z-index: 10;
+}
+
+.opening:hover {
+  background-color: tomato;
+}
+
+.opening.selected {
+  background-color: yellowgreen;
+}
