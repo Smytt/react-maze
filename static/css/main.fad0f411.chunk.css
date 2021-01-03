@@ -1,0 +1,2 @@
+.cell{width:25px;height:25px;box-sizing:border-box;display:block;float:left;border:2px solid #000;margin:-1px}.filler{background-color:#e0e0e0}.corner,.filler,.opening{border-color:#fff}.opening{background-color:teal;z-index:10}.opening:hover{background-color:tomato}.opening.selected{background-color:#9acd32}
+/*# sourceMappingURL=main.fad0f411.chunk.css.map */
