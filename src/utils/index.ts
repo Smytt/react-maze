@@ -2,11 +2,11 @@ import _ from 'lodash';
 import { Cell, Dimensions, Direction, Point } from "../types"
 
 export const generateEmptyMaze = (width: number, height: number) => {
-  const row = []
+  const row: Cell[] = []
   while (row.length < width) {
     row.push(null as unknown as Cell)
   }
-  const maze = []
+  const maze: Cell[][] = []
   while (maze.length < height) {
     maze.push([...row])
   }

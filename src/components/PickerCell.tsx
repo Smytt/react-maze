@@ -1,23 +1,28 @@
-import { PickerCell as PickerCellType } from "../types"
+import _ from 'lodash';
+import { Direction, PickerCell as PickerCellType, Point } from "../types"
 import '../css/cell.css'
-import { useState } from "react"
+import { useContext } from "react"
+import { SelectedCellsContext } from "../providers/SelectedCellsProvider"
 
-const PickerCell: React.FC<Props> = ({ type }) => {
+const PickerCell: React.FC<Props> = ({ type, point }) => {
 
-  const [selected, setSelected] = useState(false)
+  const { points, addPoint } = useContext(SelectedCellsContext)
+
+  console.log('point')
 
   const selectCell = () => {
-    setSelected(!selected)
+    addPoint(point)
   }
 
   return (
-    <div className={`cell ${type} ${selected ? 'selected' : ''}`} onClick={selectCell}>
+    <div className={`cell ${type} ${_.some(points, point) ? 'selected' : ''}`} onClick={selectCell}>
     </div>
   )
 }
 
 interface Props {
-  type: PickerCellType
+  type: PickerCellType,
+  point?: Point,
 }
 
 export default PickerCell
